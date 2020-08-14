@@ -2,6 +2,9 @@
 The Nest
 
 ::Start
+(display: "DragonStartingStats")
+
+::StartAdventure
 You have a nest. Do you want to [[defend it->Win]] or [[not->Lose]]?
 
 ::Win
@@ -11,3 +14,6 @@ You win!
 You lose!
 
 **THE END**
+
+::StoryIncludes
+starting-stats.tw2
