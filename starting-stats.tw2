@@ -1,0 +1,14 @@
+::DragonStartingStats
+(set: $creature to "Dragon")\
+(display: "GenericStartingStats")
+
+::GenericStartingStats
+(set: $hoard to 0)\
+(set: $food to 10)\
+(set: $outrage to 0)\
+(set: $fame to 0)\
+(set: $defenders to 0)\
+(set: $traps to 0)\
+(set: $offspring to 0)\
+(set: $injuries to 0)\
+(display: "StartAdventure")
