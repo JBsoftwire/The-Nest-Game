@@ -1,14 +1,19 @@
 ::DragonStartingStats
-(set: $creature to "Dragon")\
-(display: "GenericStartingStats")
+<%= s.creature = "Dragon" %>
+<%= window.story.render("GenericStartingStats") %>
 
 ::GenericStartingStats
-(set: $hoard to 0)\
-(set: $food to 10)\
-(set: $outrage to 0)\
-(set: $fame to 0)\
-(set: $defenders to 0)\
-(set: $traps to 0)\
-(set: $offspring to 0)\
-(set: $injuries to 0)\
-(display: "StartAdventure")
+<%=
+s.hoard = 0;
+s.food = 10;
+s.outrage = 0;
+s.fame = 0;
+s.defenders = 0;
+s.traps = 0;
+s.offspring = 0;
+s.injuries = 0;
+%>
+
+<%=
+window.story.render("StartAdventure")
+%>
