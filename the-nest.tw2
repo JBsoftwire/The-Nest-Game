@@ -1,0 +1,13 @@
+::StoryTitle
+The Nest
+
+::Start
+You have a nest. Do you want to [[defend it->Win]] or [[not->Lose]]?
+
+::Win
+You win!
+
+::Lose
+You lose!
+
+**THE END**
