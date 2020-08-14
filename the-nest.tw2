@@ -14,21 +14,16 @@ The Nest
 <%= window.story.render("StartAdventure") %>
 
 ::StartAdventure
-You have a nest. Do you want to [[defend it->Defend]] or [[not->Lose]]?
+You have a nest. Do you want to [[defend it->Defend]] or [[fead->StartFoodGathering]]?
 
 ::Defend
 <%= window.story.render("StartHoardProtection") %>
-
-::Win
-You win!
-
-::Lose
-You lose!
 
 **THE END**
 
 ::StoryIncludes
 starting-stats.tw2
+sidebar.tw2
 events.tw2
 protect-hoard.tw2
 gather-food.tw2
