@@ -5,6 +5,9 @@ Twee2::build_config.story_ifid = 'cce2e4f6-0239-494a-9a4e-a5551a1df6c2'
 The Nest
 
 ::Start
+(display: "DragonStartingStats")
+
+::StartAdventure
 You have a nest. Do you want to [[defend it->Win]] or [[not->Lose]]?
 
 ::Win
@@ -14,3 +17,6 @@ You win!
 You lose!
 
 **THE END**
+
+::StoryIncludes
+starting-stats.tw2
