@@ -1,0 +1,16 @@
+::MainEvent
+{
+(set: $event to (random: 1, 3))
+(if: $event is 1)[(display: "Event1")]
+(elseif: $event is 2)[(display: "Event2")]
+(elseif: $event is 3)[(display: "Event3")]
+}
+
+::Event1 [main_event_tag]
+First event. [[Ok->Start]]
+
+::Event2 [main_event_tag]
+Second event. [[Ok->Start]]
+
+::Event3 [main_event_tag]
+Third event. [[Ok->Start]]

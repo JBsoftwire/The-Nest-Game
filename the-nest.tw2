@@ -5,12 +5,7 @@ Twee2::build_config.story_ifid = 'cce2e4f6-0239-494a-9a4e-a5551a1df6c2'
 The Nest
 
 ::Start
-You have a nest. Do you want to [[defend it->Win]] or [[not->Lose]]?
+You have a nest. [[Wait and see what happens.->MainEvent]]
 
-::Win
-You win!
-
-::Lose
-You lose!
-
-**THE END**
+::StoryIncludes
+main_event_loop.tw2
