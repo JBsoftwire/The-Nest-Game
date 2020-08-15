@@ -21,6 +21,7 @@ Adventurers Courage: <%= s.adventurer.courage %> </br>
 The Adventurer ran away in terror <%= s.adventurer.gold === 0 ? "without any gold" : `with ${s.adventurer.gold} gold` %> </br>
 <% 
     s.nest.hoard -= Math.min(0, Math.floor(s.adventurer.gold));
+    s.nest.food -= 2;
     s.adventurer = null;
 %>
 <%= window.story.render("StartAdventure") %>
