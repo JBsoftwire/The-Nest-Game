@@ -24,7 +24,7 @@
         s.gathering.food *= 0.8;
     }
     
-    s.nest.food += s.gathering.food;
+    s.nest.food += s.gathering.food - 1;
     s.gathering = null;
 %>
 <%= window.story.render("StartAdventure" %>

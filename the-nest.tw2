@@ -5,8 +5,13 @@ Twee2::build_config.story_ifid = 'cce2e4f6-0239-494a-9a4e-a5551a1df6c2'
 The Nest
 
 ::Start
-<% s.nest = {}; %> 
+<%
+    s.nest = {};
+    s.events = {};
+%>
 <%= window.story.render("DragonStartingStats") %>
+<%= window.story.render("EventList") %>
+<%= window.story.render("StartAdventure") %>
 
 ::StartAdventure
 You have a nest. Do you want to [[defend it->Defend]] or [[not->Lose]]?
@@ -24,5 +29,8 @@ You lose!
 
 ::StoryIncludes
 starting-stats.tw2
+events.tw2
 protect-hoard.tw2
 gather-food.tw2
+
+adventure/adventure1.tw2

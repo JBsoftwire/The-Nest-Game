@@ -15,4 +15,3 @@
     s.nest.offspring = 0;
     s.nest.injuries = 0;
 %>
-<%= window.story.render("StartAdventure") %>
