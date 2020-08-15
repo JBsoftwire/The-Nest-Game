@@ -1,0 +1,27 @@
+::Introduction
+For many years you have sheltered behind your mother's claws, but the cave is getting cramped, and the time has come to leave and seek your fortune in the world.
+With proud step and cunning eye you rise from the earth to greet the dawn, and set out across the country, as lesser creatures cower and flee at the mighty figure of a...</br>
+
+[[dragon]], whose iron scales and flaming breath can scatter the mightiest knights like mice.
+
+::dragon
+<% s.nest.creature = "dragon" %>
+<%= window.story.render("EstablishLair") %>
+
+::EstablishLair
+You are a ${s.nes.creature}. Taking wing, you survey the land below for a suitable place to make your realm. Will you lair in...</br>
+...a [[cave]] in the forest, full of comfy green moss and close to nature's bounty?
+...a [[mine]] in the mountains, full of gold and gems?
+...the the [[ruins]] of the castle perched atop the Shadowmoor, still feared by the common folk?
+
+::cave
+<% s.nest.location = "Cave" %>
+<%= window.story.render("BeginTurn") %>
+
+::mine
+<% s.nest.location = "Mine" %>
+<%= window.story.render("BeginTurn") %>
+
+::ruins
+<% s.nest.location = "Ruins" %>
+<%= window.story.render("BeginTurn") %>

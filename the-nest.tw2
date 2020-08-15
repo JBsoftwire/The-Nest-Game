@@ -9,6 +9,9 @@ The Nest
 <%= window.story.render("DragonStartingStats") %>
 
 ::StartAdventure
+<%= window.story.render("Introduction") %>
+
+::BeginTurn
 You have a nest. Do you want to [[defend it->Win]] or [[not->Lose]]?
 
 ::Win
@@ -21,3 +24,4 @@ You lose!
 
 ::StoryIncludes
 starting-stats.tw2
+introduction.tw2
