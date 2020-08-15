@@ -9,7 +9,10 @@ The Nest
 <%= window.story.render("DragonStartingStats") %>
 
 ::StartAdventure
-You have a nest. Do you want to [[defend it->Win]] or [[not->Lose]]?
+You have a nest. Do you want to [[defend it->Defend]] or [[not->Lose]]?
+
+::Defend
+<%= window.story.render("StartHoardProtection") %>
 
 ::Win
 You win!
@@ -21,3 +24,5 @@ You lose!
 
 ::StoryIncludes
 starting-stats.tw2
+protect-hoard.tw2
+gather-food.tw2
