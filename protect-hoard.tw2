@@ -1,0 +1,42 @@
+::StartHoardProtection
+<%
+    s.adventurer = {};
+    s.adventurer.courage = 10;
+    s.adventurer.gold = 5;
+%>
+An Adventurer has entered your domain. What do you wish to do? </br>
+<%= window.story.render("HoardProtection") %>
+
+::HoardProtection
+<% if (s.adventurer.courage !== 0) { %>
+Adventurers Courage: <%= s.adventurer.courage %> </br>
+[[Defend Hoard]] </br>
+[[Scare Adventurer]] </br>
+<% } else { %>
+<%
+    s.adventurer.gold = Math.min(0, Math.floor(s.adventurer.gold));
+    s.nest.hoard -= s.adventurer.gold;
+%>
+
+The Adventurer ran away in terror <%= s.adventurer.gold === 0 ? "without any gold" : `with ${s.adventurer.gold} gold` %> </br>
+<% 
+    s.nest.hoard -= Math.min(0, Math.floor(s.adventurer.gold));
+    s.nest.food -= 2;
+    s.adventurer = null;
+%>
+<%= window.story.render("StartAdventure") %>
+<% } %>
+
+::Defend Hoard
+<% s.adventurer.gold -= Math.min(1, s.adventurer.gold * 0.2); %>
+The Adventurer is startled, dropping some gold.</br>
+<%= window.story.render("HoardProtection") %>
+
+::Scare Adventurer
+<%
+    s.adventurer.courage -= 2;
+    s.adventurer.gold += s.adventurer.courage * 0.8;
+%>
+<%= ( s.adventurer.courage > 0 ) ? "The Adventurer gets scared while scavenging some gold. Their courage is waining." : "" %> </br>
+<%= window.story.render("HoardProtection") %>
+

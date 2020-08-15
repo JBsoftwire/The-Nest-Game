@@ -1,0 +1,15 @@
+::EventList
+<%= window.story.render("AdventureEvents") %>
+<%= window.story.render("FoodGatheringEvents") %>
+
+::AdventureEvents
+<%
+    s.events.adventure = [];
+    s.events.adventure[0] = { "label": "Adventure 1", "marker": "AdventureMarker" }
+%>
+
+::FoodGatheringEvents
+<%
+    s.events.foodGathering = [];
+    s.events.foodGathering[0] = { "label": "Food Gathering 1", "marker": "StartFoodGathering" }
+%>

@@ -1,0 +1,30 @@
+::StartFoodGathering
+<% 
+    s.gathering = {}
+    s.gathering.food = 0;
+    s.gathering.burden = 0;
+%>
+<%= window.story.render("FoodGather") %>
+
+::FoodGathering
+[[Gather More Food->Gather]]</br>
+[[Return With Food->Return]]</br>
+
+::Gather
+<%
+    s.gathering.food ++;
+    s.gathering.burden ++;
+    s.nest.outrage += s.gathering.food * 2;
+%>
+<%= window.story.render("FoodGather") %>
+
+::Return
+<%
+    if (s.gathering.burden >= 5) {
+        s.gathering.food *= 0.8;
+    }
+    
+    s.nest.food += s.gathering.food - 1;
+    s.gathering = null;
+%>
+<%= window.story.render("StartAdventure" %>
